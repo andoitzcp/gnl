@@ -6,14 +6,14 @@
 /*   By: acampo-p <acampo-p@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 20:30:52 by acampo-p          #+#    #+#             */
-/*   Updated: 2023/01/12 22:22:48 by acampo-p         ###   ########.fr       */
+/*   Updated: 2023/01/12 23:43:18 by acampo-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 
-//#define BUFFER_SIZE 42
+#define BUFFER_SIZE 42
 
 typedef struct	s_bufr
 {
