@@ -6,7 +6,7 @@
 /*   By: acampo-p <acampo-p@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:21:27 by acampo-p          #+#    #+#             */
-/*   Updated: 2023/01/15 15:10:33 by acampo-p         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:22:39 by acampo-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,13 @@ int	main(void)
 	printf("main_7: %s", nl);
 	nl = get_next_line(fd);
 	printf("main_8: %s", nl);
+	nl = get_next_line(fd);
+	printf("main_9: %s", nl);
+	nl = get_next_line(fd);
+	printf("main_10: %s", nl);
+	nl = get_next_line(fd);
+	printf("main_11: %s", nl);
+	nl = get_next_line(fd);
+	printf("main_12: %s", nl);
 	close(fd);
 }

@@ -6,7 +6,7 @@
 /*   By: acampo-p <acampo-p@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 20:37:32 by acampo-p          #+#    #+#             */
-/*   Updated: 2023/01/15 16:48:04 by acampo-p         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:34:21 by acampo-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,15 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE < 1 || read(fd, 0, 0) < 0 )
 		return (NULL);
-	if (!bufr || !*bufr)
-	{
+	//printf("flag1\tptr: %p, str: %s\n", bufr, bufr);
+	if (!bufr)
 		bufr = ft_readfd(fd, bufr);
-		if (!*bufr)
-		{
-			return (NULL);
-		}
+	//printf("flag2\tptr: %p, str: %s\n", bufr, bufr);
+	if (!*bufr)
+	{
+		free(bufr);
+		bufr = NULL;
+		return (NULL);
 	}
 	aux = ft_strdup("");
 	nl_indx = ft_nextnlpos(bufr);
