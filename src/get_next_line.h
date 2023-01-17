@@ -6,7 +6,7 @@
 /*   By: acampo-p <acampo-p@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 20:30:52 by acampo-p          #+#    #+#             */
-/*   Updated: 2023/01/16 22:50:11 by acampo-p         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:51:53 by acampo-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-//#define BUFFER_SIZE 42
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 ssize_t	ft_nextnlpos(const void *start);
 char	*get_next_line(int fd);
